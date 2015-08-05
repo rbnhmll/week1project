@@ -1,0 +1,553 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+
+					/*BROAD STYLING*/
+					/*-------------*/
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+h3 {
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+.wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+a:hover {
+	color: #00d8ff;
+	transition: all .4s ease;
+}
+
+header {
+	position: relative;
+	background-image: url(images/icelandBackground.jpg);
+	background-size: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	padding: 25px 0;
+	color: #fff;
+	border-bottom: 3px solid #ddd;
+	z-index: 0;
+}
+
+i.fa-angle-down,
+i.fa-angle-up {
+	font-size: 30px;
+	font-weight: 300;
+	margin: 0 auto;
+}
+
+
+
+
+					/*BRACKET STYLING*/
+					/*---------------*/
+
+.bracket {
+	display: inline-block;
+	border: 1px solid #00d8ff;
+}
+
+.bracketTop {
+	border-bottom: none;
+	width: 100%;
+	height: 5px;
+}
+
+.bracketBottom {
+	border-top: none;
+	width: 100%;
+	height: 5px;
+}
+
+.bracketLeft,
+.bracketRight {
+	width: 5px;
+	height: 23px;
+}
+
+.bracketLeft {
+	border-right: none;
+}
+
+.bracketRight {
+	border-left: none;
+}
+
+.lineLeft,
+.lineRight {
+	display: inline-block;
+	border-top: 1px solid #ddd;
+	height: 7px;
+	padding: 0;
+	margin: 0;
+}
+
+.lineLeft {
+	width: 200px;
+	border-right: 1px solid #ddd;
+}
+
+.lineRight {
+	width: 201px;
+}
+
+
+
+
+
+					/*HEADER SECTION*/
+					/*--------------*/
+
+.logo {
+	float: left;
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.logo span {
+	font-size: 14px;
+	color: #00d8ff;
+}
+
+nav ul {
+	float: right;
+	margin: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	width: 60px;
+	margin: 0 15px;
+}
+
+nav ul li:last-child {
+	margin-right: none;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+nav .navBracket {
+	opacity: 0;
+	transition: all .4s ease;
+}
+
+nav li:hover .navBracket,
+nav li:hover a {
+	color: #00d8ff;
+	opacity: 1;
+}
+
+.contentText {
+	max-width: 410px;
+	margin: 125px auto;
+}
+
+.contentText .bracketTop,
+.contentText .bracketBottom {
+	transition: all 0.5s ease-in-out;
+	transform: translatey(0);
+}
+
+.contentText:hover .bracketTop {
+	transform: translatey(-10px);
+}
+
+.contentText:hover .bracketBottom {
+	transform: translatey(10px);
+}
+
+.contentText h2 {
+	font-weight: 300;
+	font-size: 30px;
+}
+
+.contentText p {
+	margin: 50px 10%;
+}
+
+a i.fa-angle-down {
+	color: #ddd;
+	transition: all 0.4s ease;
+}
+
+a:hover i.fa-angle-down {
+	color: #00d8ff;
+}
+
+
+
+
+					/*ABOUT SECTION*/
+					/*-------------*/
+
+.about {
+	padding: 50px 0;
+	background: #fff;
+}
+
+.about p {
+	color: #999;
+}
+
+.skill {
+	width: 25%;
+	float: left;
+	padding: 20px;
+}
+
+.about .icon {
+	display: inline-block;
+	width: 65px;
+}
+
+.about .devicons {
+	color: #00d8ff;
+	font-size: 60px;
+}
+
+.about .bracketBottom {
+	width: 65px;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+
+.about h4 {
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+
+
+
+					/*VIDEO SECTION*/
+					/*-------------*/
+
+.video {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background-image: linear-gradient(rgba(0, 219, 255, 0.25),rgba(0, 219, 255, 0.25)), url(images/Hello-World.jpg);
+	background-attachment: fixed;
+}
+
+/*video {
+	position: fixed;
+	z-index: -999;
+	width: 100%;
+	top: 0;
+	left: 0;
+}*/
+
+
+
+
+					/*WORKS SECTION*/
+					/*---------------*/
+
+.works {
+	padding: 40px 0;
+	background: #fff;
+}
+
+.works p {
+	color: #999;
+	width: 75%;
+	margin: 25px 12.5%;
+}
+
+.works .projects {
+	margin: 35px 0;
+}
+
+.works .project {
+	float: left;
+	margin: 50px 0;
+	width: 31.33%;
+	margin: 0 1%;
+	border: 1px solid #ddd;
+	position: relative;
+	font-size: 0;
+}
+
+.works img {
+	height: auto;
+	width: 100%;
+}
+
+.works .projectOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	line-height: 0;
+	transition: all 0.3s ease;
+}
+
+.works .project:hover .projectOverlay {
+	opacity: 1;
+}
+
+.works .projectOverlay p {
+	color: #ccc;
+	text-transform: uppercase;
+	font-size: 28px;
+	font-weight: 300;
+	position: relative;
+	top: 35%;
+}
+
+
+
+
+					/*STATS SECTION*/
+					/*-------------*/
+
+.stats {
+	background: rgba(0, 219, 255, 1);
+}
+
+.stat .fa {
+	font-size: 45px;
+}
+
+.stat .fa::after {
+	content: "\00a0";
+}
+
+.stat p.statValue {
+	font-size: 55px;
+	margin: 0;
+}
+
+.stat {
+	width: 25%;
+	float: left;
+	padding: 50px 25px;
+	color: #fff;
+}
+
+.stat .fa,
+.stat p.statValue {
+	display:inline-block;
+	z-index: 999;
+}
+
+.stat .bracketBottom {
+	border: 1px solid #fff;
+	border-top: none;
+}
+
+
+
+
+					/*CONTACT SECTION*/
+					/*---------------*/
+
+.contact {
+	padding: 40px 0;
+	background: #fff;
+}
+
+.contact p {
+	color: #999;
+	width: 75%;
+	margin: 25px 12.5%;
+}
+
+.contact .subTitle {
+	text-transform: uppercase;
+}
+
+.contact form {
+	width: 75%;
+	margin: 0 12.5%;
+}
+
+.contact input[type=text],
+.contact input[type=email] {
+	width: calc(33.3% - 1.33%);
+	float: left;
+	padding: 10px;
+	font-weight: 300;
+}
+
+.contact textarea {
+	width: 100%;
+	max-width: 100%;
+	clear: both;
+	padding: 10px;
+	font-weight: 300;
+	margin: 25px 0 35px 0;
+	border: 1px solid #ccc;
+}
+
+.contact input:nth-child(1) {
+	margin-right: 1%;
+}
+
+.contact input:nth-child(2) {
+	margin: 0 1%;
+}
+
+.contact input:nth-child(3) {
+	margin-left: 1%;
+}
+
+.contact .submitArea {
+	display: inline-block;
+	margin: 0 auto;
+	width: 85px;
+	cursor: pointer;
+}
+
+.submitArea .bracketLeft,
+.submitArea .bracketRight {
+	transform: translatex(0);
+	transition: all 0.4s ease-in-out;
+}
+
+.submitArea:hover .bracketLeft {
+	transform: translatex(-10px);
+}
+
+.submitArea:hover .bracketRight {
+	transform: translatex(10px);
+}
+
+.contact .bracket,
+.contact .submit {
+	float: left;
+}
+
+.contact .submit {
+	border: none;
+	background: none;
+}
+
+
+
+					/*CONTACT LINK SECTION*/
+					/*--------------------*/
+
+.contactLink {
+	background: url(images/icelandBar.jpg);
+	background-size: cover;
+	padding: 20px 0;
+}
+
+.contactType {
+	display: inline-block;
+	width: 25%;
+	margin: 4%;
+}
+
+.contactType .fa {
+	font-size: 40px;
+	color: #00d8ff;
+}
+
+.contactType h4 {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 12px;
+	margin-top: 40px;
+}
+
+.contactType a,
+.contactType address {
+	text-decoration: none;
+	color: black;
+	font-style: normal;
+}
+
+
+
+
+
+					/*FOOTER SECTION*/
+					/*--------------*/
+
+footer {
+	color: #fff;
+	background: #000;
+	padding: 25px 0;
+}
+
+.logoBox {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.logoBox .bracketTop,
+.logoBox .bracketBottom {
+	transform: translatey(0);
+	transition: all 0.5s ease-in-out;
+}
+
+.logoBox:hover .bracketTop {
+	transform: translatey(-10px);
+}
+
+.logoBox:hover .bracketBottom {
+	transform: translatey(10px);
+}
+
+footer a {
+	color: #ddd;
+	text-decoration: none;
+}
+
+footer h3.logo {
+	margin: 15px 7px;
+	transform: translateX(5px);
+}
+
+footer span.logoBottom {
+	color: #ddd;
+}
+
+.social .fa {
+	font-size: 25px;
+	margin: 30px 15px 0 15px;
+}
+
+footer p.copyRight {
+	margin: 25px 0;
+	font-size: 12px;
+}
+
+/*.fa-angle-up {
+	margin: 0 auto;
+}*/
